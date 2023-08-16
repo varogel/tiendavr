@@ -1,2 +1,2 @@
 # tiendavr
-Tienda con Php/Js
+Tienda de Victor Andres Zelada Rogel
