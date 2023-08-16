@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>ShoppingVR</title>
+
+
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/css/estilos.css">
+  </head>
+
+  <body>
+
+    <header></header>
+
+    <div class="container" id="main">
+        <div class="main-form">
+            <div class="row">
+                <div class="col-md-12">
+                    <fieldset>
+                        <legend>Registrarse</legend>
+                            <form method="post" id="signup-form">
+                                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                                <div class="form-group">
+                                    <label>Nombres</label>
+                                    <input type="text" id="nombres" name="nombres" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellidos</label>
+                                    <input type="text" id="apellidos" name="apellidos" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Correo</label>
+                                    <input type="email" id="correo" name="correo" maxlength="100" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>DUI</label>
+                                    <input type="text" id="dui" name="dui" placeholder="00000000-0" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Teléfono</label>
+                                    <input type="text" id="telefono" name="telefono" placeholder="0000-0000" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nacimiento</label>
+                                    <input type="date" id="nacimiento" name="nacimiento" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Dirección</label>
+                                    <input type="text" id="direccion" name="direccion" maxlength="200" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Clave</label>
+                                    <input type="password" id="clave" name="clave"  class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Confirmar Clave</label>
+                                    <input type="password" id="confirmar_clave" name="confirmar_clave" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="condicion" name="condicion" required>
+                                    <span>Acepto <a href="#" class="modal-trigger">términos y condiciones</a></span>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
+                            </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        
+      <footer class="footer"></footer>
+
+    </div> 
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdBzLQUAAAAAJvH-aCUUJgliLOjLcmrHN06RFXT"></script>
+    <script src="../../resources/js/jquery.min.js"></script>
+    <script src="../../resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/components.js"></script>
+    <script type="text/javascript" src="../../controllers/public/account.js"></script>
+    <script type="text/javascript" src="../../controllers/public/signup.js"></script>
+  </body>
+</html>

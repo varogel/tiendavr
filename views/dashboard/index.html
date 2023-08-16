@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ShoppingVR</title>
+
+
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/css/estilos.css">
+  </head>
+
+  <body>
+
+
+   <header></header>
+
+    <div class="container" id="main">
+        <div class="hide main-login" id="login-container">
+            <form method="post" id="login-form">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center">INICIAR SESION</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p class="text-center">
+                            <img src="../../resources/img/logo.png" alt="" height="40px">
+                        </p>
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <input type="text" class="form-control validate" id="alias" name="alias" placeholder="Usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="clave" name="clave" placeholder="Password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="hide main-login" id="signup-container" >
+            <form method="post" id="signup-form">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="text-center">REGISTRAR PRIMER USUARIO</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p class="text-center">
+                            <img src="../../resources/img/logo.png" alt="" height="40px">
+                        </p>
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Nombres" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo Electronico</label>
+                            <input type="email" class="form-control" id="correo" name="correo" placeholder="Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Contraseña</label>
+                            <input type="password" class="form-control" id="codigo" name="codigo" placeholder="Contraseña" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Repetir Contraseña</label>
+                            <input type="password" class="form-control" id="confirmar" name="confirmar" placeholder="Confirmar Contraseña" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div> 
+    <script src="../../resources/js/jquery.min.js"></script>
+    <script src="../../resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/components.js"></script>
+    <script type="text/javascript" src="../../controllers/dashboard/account.js"></script>
+    <script type="text/javascript" src="../../controllers/dashboard/index.js"></script>
+
+  </body>
+</html>

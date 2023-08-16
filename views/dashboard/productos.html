@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>ShoppingVR</title>
+  <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../resources/css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header></header>
+
+  <div class="container" id="main">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pull-center">
+          <form class="d-flex" role="search" method="post" id="search-form">
+            <input id="search" type="text" name="search" class="form-control me-2 light-table-filter" data-table="table"
+              placeholder="Buscar" aria-label="Search" required>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="pull-center">
+          <a onclick="openReport()" class="btn btn-primary" data-tooltip="Reporte">
+            <i class="fa fa-file" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="pull-center">
+          <a href="categorias.html" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>
+            </i> Categorias </a>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="pull-center">
+          <a onclick="openCreate()" type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#modalProductos"><span class="glyphicon glyphicon-plus"></span> </i> Nuevo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <fieldset>
+          <legend>Listado de Productos</legend>
+          <table class="table table-bordered">
+            <thead>
+              <tr id="records"></tr>
+              <tr>
+                <th>Titulo</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+                <th class="text-center">Foto</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-rows">
+
+            </tbody>
+          </table>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalProductos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
+          <h4 id="modal-title" class="center-align"></h4>
+        </div>
+        <div class="modal-body">
+          <form class="row" method="post" id="save-form" enctype="multipart/form-data">
+            <input type="hidden" id="id" name="id">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Titulo</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Descripción</label>
+                  <textarea class="form-control" id="descripcion" type="text" name="descripcion" cols="3"
+                    required></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Categorias</label>
+                  <select class="form-control" id="categoria" name="categoria" required>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <p>
+                  <div class="switch">
+                    <span>Estado:</span>
+                    <label>
+                      <input id="estado" type="checkbox" name="estado" checked>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Foto</label> <br>
+                  <input id="archivo" type="file" class="form-control" name="archivo" accept=".jpg, .png" required />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Precio</label>
+                  <input id="precio" type="number" name="precio" step="0.01" required />
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" aria-label="Close" class="btn btn-default">
+            Cancelar
+          </button>
+          <input type="submit" name="accion" class="btn btn-primary" value="Registrar" />
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+  <script src="../../resources/js/jquery.min.js"></script>
+  <script src="../../resources/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+  <script type="text/javascript" src="../../controllers/components.js"></script>
+  <script type="text/javascript" src="../../controllers/dashboard/account.js"></script>
+  <script type="text/javascript" src="../../controllers/dashboard/productos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>ShoppingVR</title>
+
+
+    <link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/css/estilos.css">
+  </head>
+
+  <body>
+
+    <header></header>
+
+    <div class="container" id="main">
+            <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr id="records"></tr>
+                    <tr>
+                      <th>#</th>
+                      <th>Producto</th>
+                      <th>Precio</th>
+                      <th>Cantidad</th>
+                      <th>SubTotal</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody-rows">
+
+                </tbody>
+                <tfoot>
+                        <tr>
+                            <td colspan="5" class="text-right">Total</td>
+                            <td><b id="pago"></b></td>
+                            <td></td>
+                        </tr>
+
+                </tfoot>
+            </table>
+            <hr>
+            <div class="row">
+                    <div class="pull-left">
+                        <a href="index.html" class="btn btn-info">Seguir Comprando</a>
+                    </div>
+                    <div class="pull-right">
+                        <a onclick="finishOrder()" class="btn btn-success">Finalizar Compra</a>
+                    </div>
+            </div>
+
+    </div>
+    <script src="../../resources/js/jquery.min.js"></script>
+    <script src="../../resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../../controllers/components.js"></script>
+    <script type="text/javascript" src="../../controllers/public/account.js"></script>
+    <script type="text/javascript" src="../../controllers/public/cart.js"></script>
+  </body>
+</html>
